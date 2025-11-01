@@ -1,0 +1,97 @@
+{
+  "GATE": {
+    "AND": {
+      "name": "AND Gate",
+      "description": "Outputs true only if both inputs are true.",
+      "inputs": [
+        { "name": "Input 1", "type": ["Boolean"] },
+        { "name": "Input 2", "type": ["Boolean"] }
+      ],
+      "outputs": [
+        { "name": "Output", "type": ["Boolean"] }
+      ],
+      "sim": [
+        { "head": "Truth Table" },
+        { "in": [0, 0], "out": [0] },
+        { "in": [0, 1], "out": [0] },
+        { "in": [1, 0], "out": [0] },
+        { "in": [1, 1], "out": [1] }
+      ]
+    },
+    "XNOR": {
+      "name": "XNOR Gate",
+      "description": "Returns true when both inputs are the same.",
+      "inputs": [
+        { "name": "Input 1", "type": ["Boolean"] },
+        { "name": "Input 2", "type": ["Boolean"] }
+      ],
+      "outputs": [
+        { "name": "Output", "type": ["Boolean"] }
+      ],
+      "sim": [
+        { "head": "Truth Table" },
+        { "in": [0, 0], "out": [1] },
+        { "in": [0, 1], "out": [0] },
+        { "in": [1, 0], "out": [0] },
+        { "in": [1, 1], "out": [1] },
+        { "head": "Equivalent to XOR followed by NOT" }
+      ]
+    },
+     "OR": {
+      "name": "OR Gate",
+      "description": "Outputs true if any input is true.",
+      "inputs": [
+        { "name": "Input 1", "type": ["Boolean"] },
+        { "name": "Input 2", "type": ["Boolean"] }
+      ],
+      "outputs": [
+        { "name": "Output", "type": ["Boolean"] }
+      ],
+      "sim": [
+        { "head": "Truth Table" },
+        { "in": [0, 0], "out": [0] },
+        { "in": [0, 1], "out": [1] },
+        { "in": [1, 0], "out": [1] },
+        { "in": [1, 1], "out": [1] }
+      ]
+    },
+  },
+  "MATH": {
+    "ADD": {
+      "name": "Add Block",
+      "description": "Adds values together.",
+      "inputs": [
+        { "name": "A", "type": ["Number", "Vector3"] },
+        { "name": "B", "type": ["Number", "Vector3"] }
+      ],
+      "outputs": [
+        { "name": "Result", "type": ["Number", "Vector3"] }
+      ],
+      "sim": [
+        { "head": "Number Examples" },
+        { "in": [-5, 3], "out": [-2] },
+        { "in": [3, 4], "out": [7] },
+        { "in": [0, 0], "out": [0] },
+        { "head": "Vector Examples" },
+        { "in": ["Vector3(10, 20, 13)", "Vector3(5, 3, 7)"], "out": ["Vector3(15, 23, 20)"] }
+      ]
+    },
+    "ABS": {
+      "name": "ABS Block",
+      "description": "Removes the negative sign from a number or vector component.",
+      "inputs": [
+        { "name": "Value", "type": ["Number", "Vector3"] }
+      ],
+      "outputs": [
+        { "name": "Absolute Value", "type": ["Number", "Vector3"] }
+      ],
+      "sim": [
+        { "head": "Examples" },
+        { "in": [-5], "out": [5] },
+        { "in": [0], "out": [0] },
+        { "in": [-3.2], "out": [3.2] },
+        { "in": ["Vector3(-1, -2, 3)"], "out": ["Vector3(1, 2, 3)"] }
+      ]
+    }
+  }
+}
