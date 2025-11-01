@@ -1,14 +1,31 @@
-"BLOCK_ID": {
-  "name": "",
-  "description": "",
-  "inputs": [
-    { "name": "", "type": [] }
-  ],
-  "outputs": [
-    { "name": "", "type": [] }
-  ],
-  "sim": [
-    { "head": "" },
-    { "in": [], "out": [] }
-  ]
+{
+  "BLOCK_ID": {
+    "name": "Block Name",
+    "description": "Short description of what the block does.",
+    "inputs": [
+      {
+        "name": "Input 1",
+        "type": ["Number", "Vector3", "Boolean", "String"]
+      },
+      {
+        "name": "Input 2",
+        "type": ["Number", "Vector3", "Boolean", "String"]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "Output",
+        "type": ["Number", "Vector3", "Boolean", "String"]
+      }
+    ],
+    "sim": [
+      { "head": "Example Simulation" },
+      { "in": [0, 0], "out": [0] },
+      { "in": [1, 1], "out": [1] }
+    ],
+    "notes": [
+      "Optional: Additional comments or quirks of this block.",
+      "Use this for special cases, behaviors, or limitations."
+    ]
+  }
 }
