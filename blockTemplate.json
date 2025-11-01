@@ -1,0 +1,14 @@
+"BLOCK_ID": {
+  "name": "",
+  "description": "",
+  "inputs": [
+    { "name": "", "type": [] }
+  ],
+  "outputs": [
+    { "name": "", "type": [] }
+  ],
+  "sim": [
+    { "head": "" },
+    { "in": [], "out": [] }
+  ]
+}
