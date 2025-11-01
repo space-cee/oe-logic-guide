@@ -1,3 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://space-cee.github.io/oe-logic-guide/</loc>
+         <lastmod>2025-11-01</lastmod>
+    </url>
+    <url>
+         <loc>https://space-cee.github.io/oe-logic-guide/OE%20LOGIC/GATE/AND/</loc>
+         <lastmod>2025-11-01</lastmod>
+    </url>
+    <url>
+         <loc>https://space-cee.github.io/oe-logic-guide/OE%20LOGIC/MATH/ABS/</loc>
+         <lastmod>2025-11-01</lastmod>
+    </url>
 </urlset>
