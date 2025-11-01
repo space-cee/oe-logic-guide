@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OE Logic Block Data</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: "Roboto", sans-serif;
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      color: #82b1ff;
+      text-align: center;
+    }
+    h2 {
+      color: #64b5f6;
+      border-bottom: 1px solid #333;
+      padding-bottom: 4px;
+    }
+    .folder {
+      margin-left: 10px;
+      padding: 10px;
+    }
+    .block {
+      margin-left: 30px;
+      background: #1e1e1e;
+      border: 1px solid #333;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .block h3 {
+      color: #81d4fa;
+      margin: 0 0 6px 0;
+    }
+    .desc {
+      color: #ccc;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+    table {
+      border-collapse: collapse;
+      margin-top: 5px;
+      width: 100%;
+      color: #ddd;
+    }
+    td, th {
+      border: 1px solid #333;
+      padding: 6px 10px;
+      text-align: left;
+    }
+    th {
+      background: #2a2a2a;
+      color: #ffa726;
+    }
+    summary {
+      cursor: pointer;
+      color: #ffcc80;
+      font-weight: 600;
+    }
+    ul {
+      margin: 5px 0 0 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>OE Logic Block Data</h1>
+  <div id="content">Loading...</div>
+
+  <script>
+    async function loadJSON() {
+      try {
+        const response = await fetch('blockData.json');
+        const data = await response.json();
+        document.getElementById('content').innerHTML = renderFolders(data);
+      } catch (e) {
+        document.getElementById('content').textContent = "Error loading JSON: " + e;
+      }
+    }
+
+    function renderFolders(obj) {
+      let html = "";
+      for (const folder in obj) {
+        html += `<details open><summary><h2>${folder}</h2></summary><div class='folder'>`;
+        const sub = obj[folder];
+        for (const key in sub) {
+          html += renderBlockOrFolder(key, sub[key]);
+        }
+        html += `</div></details>`;
+      }
+      return html;
+    }
+
+    function renderBlockOrFolder(name, item) {
+      if (item.name) {
+        // It's a block entry
+        let inputs = "";
+        if (item.inputs && item.inputs.length) {
+          inputs = `<table><tr><th>Input</th><th>Type(s)</th></tr>` +
+                   item.inputs.map(i => `<tr><td>${i.name}</td><td>${i.type.join(', ')}</td></tr>`).join('') +
+                   `</table>`;
+        }
+
+        let outputs = "";
+        if (item.outputs && item.outputs.length) {
+          outputs = `<table><tr><th>Output</th><th>Type(s)</th></tr>` +
+                    item.outputs.map(o => `<tr><td>${o.name}</td><td>${o.type.join(', ')}</td></tr>`).join('') +
+                    `</table>`;
+        }
+
+        let simExamples = "";
+        if (item.sim && item.sim.length) {
+          simExamples = "<ul>";
+          for (const s of item.sim) {
+            if (s.head) simExamples += `<li><strong>${s.head}</strong></li>`;
+            else simExamples += `<li>Input: <code>${JSON.stringify(s.in)}</code> → Output: <code>${JSON.stringify(s.out)}</code></li>`;
+          }
+          simExamples += "</ul>";
+        }
+
+        return `
+          <div class="block">
+            <h3>${item.name}</h3>
+            <div class="desc">${item.description || "No description available."}</div>
+            ${inputs}
+            ${outputs}
+            ${simExamples}
+          </div>
+        `;
+      } else {
+        // Nested folder
+        return `<details><summary>${name}</summary><div class='folder'>${renderFolders(item)}</div></details>`;
+      }
+    }
+
+    loadJSON();
+  </script>
+</body>
+</html>
