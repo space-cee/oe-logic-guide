@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://space-cee.github.io/oe-logic-guide/OE%20LOGIC/CONVERTER/Byte/">
+        <link rel="canonical" href="https://space-cee.github.io/oe-logic-guide/OE%20LOGIC/GATE/XNOR/">
       
       
-        <link rel="prev" href="../../COMMUNICATION/Placeholder/">
-      
-      
-        <link rel="next" href="../Color/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +18,7 @@
     
     
       
-        <title>Byte - OE Logic Guide</title>
+        <title>XNOR Gate - OE Logic Guide</title>
       
     
     
@@ -64,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#placeholder" class="md-skip">
+        <a href="#xnor-gate" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Byte
+              XNOR Gate
             
           </span>
         </div>
@@ -219,20 +215,20 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -248,7 +244,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             OE Logic
@@ -282,20 +278,20 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -311,7 +307,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Converter
@@ -322,19 +318,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../CONVERTER/Byte/" class="md-nav__link">
         
   
   
@@ -345,7 +332,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -358,7 +344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Color/" class="md-nav__link">
+      <a href="../../CONVERTER/Color/" class="md-nav__link">
         
   
   
@@ -381,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Units/" class="md-nav__link">
+      <a href="../../CONVERTER/Units/" class="md-nav__link">
         
   
   
@@ -404,7 +390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Vector/" class="md-nav__link">
+      <a href="../../CONVERTER/Vector/" class="md-nav__link">
         
   
   
@@ -894,8 +880,47 @@
 
 
 
-<h1 id="placeholder">Placeholder</h1>
-<p>Content coming soon.</p>
+<h1 id="xnor-gate">XNOR Gate</h1>
+<p><img alt="XNOR Block" src="../../../images/XNOR.png" /></p>
+<p><strong>Category:</strong> OE Logic &gt; Gates</p>
+<p><strong>Description:</strong> Returns true if both inputs are the same.</p>
+<p><strong>Input types:</strong><br />
+- boolean  </p>
+<p><strong>Output types:</strong><br />
+- boolean</p>
+<p><strong>Simulation:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>Input 1</th>
+<th>Input 2</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Logically equivalent to a XOR gate with a NOT after it.</p>
 
 
 
