@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://space-cee.github.io/oe-logic-guide/OE%20LOGIC/SENSOR/Placeholder/">
+        <link rel="canonical" href="https://space-cee.github.io/oe-logic-guide/OE%20LOGIC/GATE/NOT/">
       
       
-        <link rel="prev" href="../../PARTICLE/Placeholder/">
+        <link rel="prev" href="../OR/">
       
       
-        <link rel="next" href="../../SOUND/Placeholder/">
+        <link rel="next" href="../../GUI/Placeholder/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Sensor - OE Logic Guide</title>
+        <title>NOT - OE Logic Guide</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#placeholder" class="md-skip">
+        <a href="#not-gate" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sensor
+              NOT
             
           </span>
         </div>
@@ -493,20 +493,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
         
           
           <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
@@ -522,7 +522,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Gates
@@ -536,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../GATE/AND/" class="md-nav__link">
+      <a href="../AND/" class="md-nav__link">
         
   
   
@@ -559,7 +559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../GATE/XNOR/" class="md-nav__link">
+      <a href="../XNOR/" class="md-nav__link">
         
   
   
@@ -582,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../GATE/OR/" class="md-nav__link">
+      <a href="../OR/" class="md-nav__link">
         
   
   
@@ -602,10 +602,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../GATE/NOT/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -616,6 +625,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -842,19 +852,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../SENSOR/Placeholder/" class="md-nav__link">
         
   
   
@@ -865,7 +866,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -940,8 +940,33 @@
 
 
 
-<h1 id="placeholder">Placeholder</h1>
-<p>Content coming soon.</p>
+<h1 id="not-gate">NOT Gate</h1>
+<p><img alt="NOT Block" src="../../../images/NOT.png" /></p>
+<p><strong>Category:</strong> OE Logic &gt; Gates</p>
+<p><strong>Description:</strong> Returns true when input is false, and vice versa.</p>
+<p><strong>Input types:</strong><br />
+- boolean  </p>
+<p><strong>Output types:</strong><br />
+- boolean</p>
+<p><strong>Simulation:</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>Input 1</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
 
 
 
