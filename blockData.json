@@ -127,7 +127,7 @@
   },
   "MATH": {
     "ADD": {
-      "name": "Add Block",
+      "name": "ADD (Addition)",
       "description": "Adds values together.",
       "inputs": [
         { "name": "A", "type": ["Number", "Vector3"] },
@@ -145,8 +145,67 @@
         { "in": ["Vector3(10, 20, 13)", "Vector3(5, 3, 7)"], "out": ["Vector3(15, 23, 20)"] }
       ]
     },
+    "SUB": {
+      "name": "SUB (Subtraction)",
+      "description": "Subtracts the second value from the first.",
+      "inputs": [
+        { "name": "A", "type": ["Number", "Vector3"] },
+        { "name": "B", "type": ["Number", "Vector3"] }
+      ],
+      "outputs": [
+        { "name": "Result", "type": ["Number", "Vector3"] }
+      ],
+      "sim": [
+        { "head": "Number Examples" },
+        { "in": [-5, 3], "out": [-8] },
+        { "in": [4, 3], "out": [1] },
+        { "in": [0, 0], "out": [0] },
+        { "head": "Vector Examples" },
+        { "in": ["Vector3(10, 20, 13)", "Vector3(5, 23, 7)"], "out": ["Vector3(5, -3, 6)"] }
+      ]
+    },
+    "MUL": {
+      "name": "MUL (Multiplication)",
+      "description": "Multiplies values together.",
+      "inputs": [
+        { "name": "A", "type": ["Number", "Vector3"] },
+        { "name": "B", "type": ["Number", "Vector3"] }
+      ],
+      "outputs": [
+        { "name": "Result", "type": ["Number", "Vector3"] }
+      ],
+      "sim": [
+        { "head": "Number Examples" },
+        { "in": [-5, 3], "out": [-15] },
+        { "in": [4, 3], "out": [12] },
+        { "in": [0, 0], "out": [0] },
+        { "head": "Vector Examples" },
+        { "in": ["Vector3(10, 20, 13)", "Vector3(5, -3, 7)"], "out": ["Vector3(50, -60, 91)"] },
+        { "head": "Tip: Anything multiplied by 0 is 0" }
+      ]
+    },
+    "DIV": {
+      "name": "DIV (Divison)",
+      "description": "Divides the first value by the second.",
+      "inputs": [
+        { "name": "A", "type": ["Number", "Vector3"] },
+        { "name": "B", "type": ["Number", "Vector3"] }
+      ],
+      "outputs": [
+        { "name": "Result", "type": ["Number", "Vector3"] }
+      ],
+      "sim": [
+        { "head": "Number Examples" },
+        { "in": [-5, 3], "out": [-1.667] },
+        { "in": [10, 2], "out": [5] },
+        { "in": [0, 0], "out": ["UNDEFINED"] },
+        { "head": "Vector Examples" },
+        { "in": ["Vector3(10, 20, 13)", "Vector3(5, -3, 7)"], "out": ["Vector3(2, -6.667, 1.857)"] },
+        { "head": "Tip: Dividing by 0 will result in undefined, setting the block on fire." }
+      ]
+    },
     "ABS": {
-      "name": "ABS Block",
+      "name": "ABS (Absolute Value)",
       "description": "Removes the negative sign from a number or vector component.",
       "inputs": [
         { "name": "Value", "type": ["Number", "Vector3"] }
