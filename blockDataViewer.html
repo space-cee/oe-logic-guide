@@ -114,13 +114,17 @@
 
         let simExamples = "";
         if (item.sim && item.sim.length) {
-          simExamples = "<ul>";
-          for (const s of item.sim) {
-            if (s.head) simExamples += `<li><strong>${s.head}</strong></li>`;
-            else simExamples += `<li>Input: <code>${JSON.stringify(s.in)}</code> → Output: <code>${JSON.stringify(s.out)}</code></li>`;
-          }
-          simExamples += "</ul>";
+        simExamples = "<ul>";
+        for (const s of item.sim) {
+            if (s.head) {
+            simExamples += `<li><strong>${s.head}</strong></li>`;
+            } else {
+            simExamples += `<li>Input: ${formatIO(s.in)} → Output: ${formatIO(s.out)}</li>`;
+            }
         }
+        simExamples += "</ul>";
+        }
+
 
         return `
           <div class="block">
@@ -136,6 +140,21 @@
         return `<details><summary>${name}</summary><div class='folder'>${renderFolders(item)}</div></details>`;
       }
     }
+
+    function formatIO(value) {
+        if (!Array.isArray(value)) return value;
+        return value.map(v => {
+            if (typeof v === "string" && v.startsWith("Vector3(")) {
+            // Extract the numbers inside parentheses
+            const coords = v.match(/\(([^)]+)\)/);
+            if (coords && coords[1]) {
+                return `(${coords[1]})`; // Show only the vector components
+            }
+            }
+            return v;
+        }).join(", ");
+        }
+
 
     loadJSON();
   </script>
