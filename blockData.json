@@ -162,6 +162,26 @@
         { "in": ["Vector3(10.4, -20.6, 13.5)"], "out": ["Vector3(11, -20, 14)"] }
       ]
     },
+    "CLAMP": {
+      "name": "CLAMP",
+      "description": "Limits the output between min and max.",
+      "inputs": [
+        { "name": "Value", "type": ["Number", "Vector3"] },
+        { "name": "Min", "type": ["Number", "Vector3"] },
+        { "name": "Max", "type": ["Number", "Vector3"] }
+      ],
+      "outputs": [
+        { "name": "Result", "type": ["Number", "Vector3"] }
+      ],
+      "sim": [
+        { "head": "Number Examples" },
+        { "in": ["Value: 3", "Min: 0", "Max: 2"], "out": ["Result: 2"] },
+        { "in": ["Value: 0", "Min: 7", "Max: 10"], "out": ["Result: 7"] },
+        { "head": "Vector Examples" },
+        { "in": ["Value: (10.4, -20.6, 13.5)", "Min: (-1, -2, 3)", "Max: (6, 5, 20)"], "out": ["(6, 2, 13.5)"] },
+        { "head": "Tip: Make sure you Min is lower than your Max or the block will fail and burn."}
+      ]
+    },
     "SUB": {
       "name": "SUB (Subtraction)",
       "description": "Subtracts the second value from the first.",
