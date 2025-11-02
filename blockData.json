@@ -145,6 +145,23 @@
         { "in": ["Vector3(10, 20, 13)", "Vector3(5, 3, 7)"], "out": ["Vector3(15, 23, 20)"] }
       ]
     },
+    "CEIL": {
+      "name": "CEIL (Ceiling)",
+      "description": "Rounds up the input number.",
+      "inputs": [
+        { "name": "A", "type": ["Number", "Vector3"] }
+      ],
+      "outputs": [
+        { "name": "Result", "type": ["Number", "Vector3"] }
+      ],
+      "sim": [
+        { "head": "Number Examples" },
+        { "in": [-5.43], "out": [-5] },
+        { "in": [3.5], "out": [4] },
+        { "head": "Vector Examples" },
+        { "in": ["Vector3(10.4, -20.6, 13.5)"], "out": ["Vector3(11, -20, 14)"] }
+      ]
+    },
     "SUB": {
       "name": "SUB (Subtraction)",
       "description": "Subtracts the second value from the first.",
