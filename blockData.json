@@ -18,6 +18,42 @@
         { "in": [1, 1], "out": [1] }
       ]
     },
+    "NAND": {
+      "name": "NAND Gate",
+      "description": "Outputs true if any input is false.",
+      "inputs": [
+        { "name": "Input 1", "type": ["Boolean"] },
+        { "name": "Input 2", "type": ["Boolean"] }
+      ],
+      "outputs": [
+        { "name": "Output", "type": ["Boolean"] }
+      ],
+      "sim": [
+        { "head": "Truth Table" },
+        { "in": [0, 0], "out": [1] },
+        { "in": [0, 1], "out": [1] },
+        { "in": [1, 0], "out": [1] },
+        { "in": [1, 1], "out": [0] }
+      ]
+    },
+    "XOR": {
+      "name": "XOR Gate",
+      "description": "Returns true when only one input is true.",
+      "inputs": [
+        { "name": "Input 1", "type": ["Boolean"] },
+        { "name": "Input 2", "type": ["Boolean"] }
+      ],
+      "outputs": [
+        { "name": "Output", "type": ["Boolean"] }
+      ],
+      "sim": [
+        { "head": "Truth Table" },
+        { "in": [0, 0], "out": [0] },
+        { "in": [0, 1], "out": [1] },
+        { "in": [1, 0], "out": [1] },
+        { "in": [1, 1], "out": [0] }
+      ]
+    },
     "XNOR": {
       "name": "XNOR Gate",
       "description": "Returns true when both inputs are the same.",
@@ -53,6 +89,39 @@
         { "in": [0, 1], "out": [1] },
         { "in": [1, 0], "out": [1] },
         { "in": [1, 1], "out": [1] }
+      ]
+    },
+     "NOR": {
+      "name": "NOR Gate",
+      "description": "Outputs true if both inputs are false",
+      "inputs": [
+        { "name": "Input 1", "type": ["Boolean"] },
+        { "name": "Input 2", "type": ["Boolean"] }
+      ],
+      "outputs": [
+        { "name": "Output", "type": ["Boolean"] }
+      ],
+      "sim": [
+        { "head": "Truth Table" },
+        { "in": [0, 0], "out": [1] },
+        { "in": [0, 1], "out": [0] },
+        { "in": [1, 0], "out": [0] },
+        { "in": [1, 1], "out": [0] }
+      ]
+    },
+     "NOT": {
+      "name": "NOT Gate",
+      "description": "Returns true when input is false, and vice versa.",
+      "inputs": [
+        { "name": "Input 1", "type": ["Boolean"] }
+      ],
+      "outputs": [
+        { "name": "Output", "type": ["Boolean"] }
+      ],
+      "sim": [
+        { "head": "Truth Table" },
+        { "in": [0], "out": [1] },
+        { "in": [1], "out": [0] }
       ]
     }
   },
