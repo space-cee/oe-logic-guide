@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://space-cee.github.io/oe-logic-guide/OE%20LOGIC/SENSOR/Sensor/">
+        <link rel="canonical" href="https://space-cee.github.io/oe-logic-guide/OE%20LOGIC/MATH/CEIL/">
       
       
+        <link rel="prev" href="../ABS/">
+      
+      
+        <link rel="next" href="../ADD/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Placeholder - OE Logic Guide</title>
+        <title>CEIL - OE Logic Guide</title>
       
     
     
@@ -70,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#placeholder" class="md-skip">
+        <a href="#ceil-ceiling" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Placeholder
+              CEIL
             
           </span>
         </div>
@@ -273,20 +277,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -302,7 +306,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             OE Logic
@@ -802,20 +806,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
         
           
           <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
@@ -831,7 +835,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_6">
             <span class="md-nav__icon md-icon"></span>
             Math
@@ -845,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MATH/ABS/" class="md-nav__link">
+      <a href="../ABS/" class="md-nav__link">
         
   
   
@@ -865,10 +869,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../MATH/CEIL/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -879,6 +892,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -891,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MATH/ADD/" class="md-nav__link">
+      <a href="../ADD/" class="md-nav__link">
         
   
   
@@ -914,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MATH/SUB/" class="md-nav__link">
+      <a href="../SUB/" class="md-nav__link">
         
   
   
@@ -937,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MATH/Byte/" class="md-nav__link">
+      <a href="../Byte/" class="md-nav__link">
         
   
   
@@ -960,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MATH/Trigonometry/" class="md-nav__link">
+      <a href="../Trigonometry/" class="md-nav__link">
         
   
   
@@ -1060,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Placeholder/" class="md-nav__link">
+      <a href="../../SENSOR/Placeholder/" class="md-nav__link">
         
   
   
@@ -1145,8 +1159,20 @@
 
 
 
-<h1 id="placeholder">Placeholder</h1>
-<p>Content coming soon.</p>
+<h1 id="ceil-ceiling">CEIL (Ceiling)</h1>
+<p><img alt="CEIL Block" src="../../../images/CEIL.png" /></p>
+<p><strong>Category:</strong> OE Logic &gt; Math  </p>
+<p><strong>Description:</strong> Rounds input numbers up.  </p>
+<p><strong>Input types:</strong><br />
+- number<br />
+- vector (both inputs must be the same type)  </p>
+<p><strong>Output types:</strong><br />
+- number<br />
+- vector (same type as inputs)  </p>
+<p><strong>Examples:</strong><br />
+- <code>-5.43 → -5</code><br />
+- <code>3.5 → 4</code><br />
+- <code>(10.4, -20.6, 13.5) → (11, -20, 14)</code></p>
 
 
 
