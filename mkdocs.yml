@@ -51,6 +51,8 @@ nav:
           - ADD: "OE LOGIC/MATH/ADD.md"
           - SUB: "OE LOGIC/MATH/SUB.md"
           - DIV: "OE LOGIC/MATH/DIV.md"
+          - FLOOR: "OE LOGIC/MATH/FLOOR.md"
+          - MUL: "OE LOGIC/MATH/MUL.md"
           # Add more Math blocks here
           - Byte: OE LOGIC/MATH/Byte.md
           - Trigonometry: OE LOGIC/MATH/Trigonometry.md
