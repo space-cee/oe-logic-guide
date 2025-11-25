@@ -35,24 +35,11 @@ nav:
         - Display:
           - Lamps: OE LOGIC/DISPLAY/Placeholder.md
         - Gates:
-          - AND: "OE LOGIC/GATE/AND.md"
-          - XNOR: "OE LOGIC/GATE/XNOR.md"
-          - OR: "OE LOGIC/GATE/OR.md"
-          - NOT: "OE LOGIC/GATE/NOT.md"
-          - XOR: "OE LOGIC/GATE/XOR.md"
-          - NAND: "OE LOGIC/GATE/NAND.md"
-          - NOR: "OE LOGIC/GATE/NOR.md"
-          - Multiplexer: "OE LOGIC/GATE/Multiplexer.md"
+          - GATE: "OE LOGIC/GATE/Gate.md"
           # Add more Gates blocks here
         - GUI: OE LOGIC/GUI/Placeholder.md
         - Math: 
-          - ABS: "OE LOGIC/MATH/ABS.md"
-          - CEIL: "OE LOGIC/MATH/CEIL.md"
-          - ADD: "OE LOGIC/MATH/ADD.md"
-          - SUB: "OE LOGIC/MATH/SUB.md"
-          - DIV: "OE LOGIC/MATH/DIV.md"
-          - FLOOR: "OE LOGIC/MATH/FLOOR.md"
-          - MUL: "OE LOGIC/MATH/MUL.md"
+          - MATH: "OE LOGIC/MATH/Math.md"
           # Add more Math blocks here
           - Byte: OE LOGIC/MATH/Byte.md
           - Trigonometry: OE LOGIC/MATH/Trigonometry.md
